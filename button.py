@@ -69,7 +69,7 @@ muddat_menu = ReplyKeyboardMarkup(
 
 
 
-viloyat = ReplyKeyboardMarkup(
+viloyat_menu = ReplyKeyboardMarkup(
 
     keyboard=[
         [

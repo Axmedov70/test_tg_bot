@@ -7,7 +7,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from states import arenda_uy
-from button import xona, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, muddat_menu, maydon, tamir_menu, viloyat, toshkent_tuman
+from button import xona, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, muddat_menu, maydon, tamir_menu, viloyat_menu, toshkent_tuman
 from aiogram.client.session.aiohttp import AiohttpSession
 
 TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
@@ -65,7 +65,7 @@ async def muddat(message: types.Message, state: FSMContext):
 Qaysi viloyatda joylashgan?
 
 Tugmalardan birini tanlang 👇
-""", reply_markup=viloyat
+""", reply_markup=viloyat_menu
     )
     await state.set_state(arenda_uy.viloyat)
 
