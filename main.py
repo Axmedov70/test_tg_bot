@@ -54,18 +54,18 @@ Qancha muddatga ijara ga berasiz?
 Tugmalardan birini tanlang 👇
 """, reply_markup=katta_menu
 )    
-    await state.set_state(arenda_uy.kuchmas_mulk)
-
-
-@dp.message(arenda_uy.kuchmas_mulk)
-async def kuchmas_mulk(message: types.Message, state: FSMContext):
-    await state.update_data(kuchmas_mulk=message.text)
-    await message.answer(f"""
-Qancha muddatga ijara ga berasiz?
-
-Tugmalardan birini tanlang 👇
-""", reply_markup=kvartira_menu)
     await state.set_state(arenda_uy.muddat)
+
+
+# @dp.message(arenda_uy.kuchmas_mulk)
+# async def kuchmas_mulk(message: types.Message, state: FSMContext):
+#     await state.update_data(kuchmas_mulk=message.text)
+#     await message.answer(f"""
+# Qancha muddatga ijara ga berasiz?
+
+# Tugmalardan birini tanlang 👇
+# """, reply_markup=kvartira_menu)
+#     await state.set_state(arenda_uy.muddat)
 
 
 @dp.message(arenda_uy.muddat)
