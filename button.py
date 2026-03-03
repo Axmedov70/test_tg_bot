@@ -69,7 +69,7 @@ kvartira_menu = ReplyKeyboardMarkup(
 
 
 
-uzoq_muddatga = ReplyKeyboardMarkup(
+viloyat = ReplyKeyboardMarkup(
 
     keyboard=[
         [

@@ -7,12 +7,13 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from states import arenda_uy
-from button import xona, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, kvartira_menu, maydon, tamir_menu, uzoq_muddatga, toshkent_tuman
+from button import xona, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, kvartira_menu, maydon, tamir_menu, viloyat, toshkent_tuman
 from aiogram.client.session.aiohttp import AiohttpSession
 
 TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
 
 PROXY_URL = 'http://proxy.server:3128'
+
 session = AiohttpSession(proxy=PROXY_URL)
 
 bot = Bot(token=TOKEN, session=session)
@@ -45,7 +46,6 @@ Tugmalardan birini tanlang 👇
     await state.set_state(arenda_uy.kuchmas_mulk)
 
 
-# Kvartira boshlandi
 @dp.message(arenda_uy.kuchmas_mulk)
 async def kuch_mulk(message: types.Message, state: FSMContext):
     await state.update_data(kuchmas_mulk=message.text)
@@ -58,17 +58,6 @@ Tugmalardan birini tanlang 👇
     await state.set_state(arenda_uy.muddat)
 
 
-# @dp.message(arenda_uy.kuchmas_mulk)
-# async def kuchmas_mulk(message: types.Message, state: FSMContext):
-#     await state.update_data(kuchmas_mulk=message.text)
-#     await message.answer(f"""
-# Qancha muddatga ijara ga berasiz?
-
-# Tugmalardan birini tanlang 👇
-# """, reply_markup=kvartira_menu)
-#     await state.set_state(arenda_uy.muddat)
-
-
 @dp.message(arenda_uy.muddat)
 async def muddat(message: types.Message, state: FSMContext):
     await state.update_data(muddat=message.text)
@@ -76,7 +65,7 @@ async def muddat(message: types.Message, state: FSMContext):
 Qaysi viloyatda joylashgan?
 
 Tugmalardan birini tanlang 👇
-""", reply_markup=uzoq_muddatga
+""", reply_markup=viloyat
     )
     await state.set_state(arenda_uy.viloyat)
 
