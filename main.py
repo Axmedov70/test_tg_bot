@@ -7,7 +7,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from states import arenda_uy
-from button import xona, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, kvartira_menu, maydon, tamir_menu, viloyat, toshkent_tuman
+from button import xona, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, muddat_menu, maydon, tamir_menu, viloyat, toshkent_tuman
 from aiogram.client.session.aiohttp import AiohttpSession
 
 TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
@@ -53,7 +53,7 @@ async def kuch_mulk(message: types.Message, state: FSMContext):
 Qancha muddatga ijara ga berasiz?
 
 Tugmalardan birini tanlang 👇
-""", reply_markup=katta_menu
+""", reply_markup=muddat_menu
 )    
     await state.set_state(arenda_uy.muddat)
 
@@ -105,7 +105,7 @@ Tugmalardan birini tanlang. 👇
 
 @dp.message(arenda_uy.maydon)
 async def maydon(message: types.Message, state: FSMContext):
-    await state.update_data(tamir=message.text)
+    await state.update_data(maydon=message.text)
     await message.answer("""
 Ta'miri qanday?
 
@@ -173,19 +173,6 @@ yoki boshqa raqamingizni shu ko'rinishda yozing!
 
 @dp.message(arenda_uy.tel_raqam)
 async def tel_raqam(message: types.Message, state: FSMContext):
-    await state.update_data(tel_raqam=message.text)
-    await message.answer(f"""
-Qancha muddatga ijara ga berasiz?
-
-Tugmalardan birini tanlang 👇
-""", reply_markup=kvartira_menu)
-    await state.set_state(arenda_uy.muddat)
-
-
-
-
-@dp.message(arenda_uy.tel_raqam)
-async def tel_raqam(message: types.Message, state: FSMContext):
     await state.update_data(finish=message.text)
     data = await state.get_data()
 
@@ -202,7 +189,7 @@ async def tel_raqam(message: types.Message, state: FSMContext):
 🛏️ JIHOZLAR:   {data.get('jihozlar')}
 📸 RASIMLAR:   {data.get('rasim')}
 💵 NARX:  {data.get('narx')}
-💳 MAKLER:   {data.get('makler_money')}
+💳 MAKLER:   {data.get('makler')}
 📞 TELEFON RAQAM:   {data.get('tel_raqam')}
 
 ✏️ @{message.from_user.username}

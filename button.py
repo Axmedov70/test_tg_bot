@@ -53,7 +53,7 @@ katta_menu = ReplyKeyboardMarkup(
 
 
 
-kvartira_menu = ReplyKeyboardMarkup(
+muddat_menu = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="Uzoq muddatga"),
