@@ -173,25 +173,20 @@ async def tel_raqam(message: types.Message, state: FSMContext):
     text = f"""
 🌟IJARA-CHI | KVARTIRA, {data.get('kuchmas_mulk')}
 
-🏦 KUCHMAS MULK:   {data.get('kuchmas_mulk')}
-⏰ MUDDAT:   {data.get('muddat')}
-🏔️ VILOYAT:   {data.get('viloyat')}
-🏙 TUMAN:   {data.get('tuman')}
-🚪 NECHA XONA:   {data.get('xona')}
-🏡 MAYDON:   {data.get('maydon')}
-🛠️ TAMIR:   {data.get('tamir')}
-🛏️ JIHOZLAR:   {data.get('jihozlar')}
-📸 RASIMLAR:   {data.get('rasim')}
+🏦 KUCHMAS MULK:  {data.get('kuchmas_mulk')}
+⏰ MUDDAT:  {data.get('muddat')}
+🏔️ VILOYAT:  {data.get('viloyat')}
+🏙 TUMAN:  {data.get('tuman')}
+🚪 NECHA XONA:  {data.get('xona')}
+🏡 MAYDON:  {data.get('maydon')}
+🛠️ TAMIR:  {data.get('tamir')}
+🛏️ JIHOZLAR:  {data.get('jihozlar')}
 💵 NARX:  {data.get('narx')}
 💳 MAKLER:   {data.get('makler')}
 📞 TELEFON RAQAM:   {data.get('tel_raqam')}
 
 ✏️ @{message.from_user.username}
-📱 {data.get('tel_raqam')}
 
-
-📣 KANAL    📝 OLX
-👥 GURUH   📷 INSTAGRAM
 """
 
     await state.clear()
