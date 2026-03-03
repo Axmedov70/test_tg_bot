@@ -8,16 +8,10 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 from states import arenda_uy
 from button import xona_menu, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, muddat_menu, maydon_menu, tamir_menu, viloyat_menu, toshkent_tuman
-from aiogram.client.session.aiohttp import AiohttpSession
 
 TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
 
-PROXY_URL = 'http://proxy.server:3128'
-
-session = AiohttpSession(proxy=PROXY_URL)
-
-bot = Bot(token=TOKEN, session=session)
-
+bot = Bot(token=TOKEN)
 logging.basicConfig(level=logging.INFO)
 
 dp = Dispatcher(storage=MemoryStorage())
