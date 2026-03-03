@@ -15,7 +15,7 @@ TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
 PROXY_URL = 'http://proxy.server:3128'
 session = AiohttpSession(proxy=PROXY_URL)
 
-bot = Bot(token=TOKEN)
+bot = Bot(token=TOKEN, session=session)
 
 logging.basicConfig(level=logging.INFO)
 
