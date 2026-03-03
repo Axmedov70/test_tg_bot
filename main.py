@@ -46,8 +46,9 @@ Tugmalardan birini tanlang 👇
 
 
 # Kvartira boshlandi
-@dp.message(F.text == "Kvartira")
-async def kv(message: types.Message, state: FSMContext):
+@dp.message(arenda_uy.kuchmas_mulk)
+async def kuch_mulk(message: types.Message, state: FSMContext):
+    await state.update_data(kuchmas_mulk=message.text)
     await message.answer(f"""
 Qancha muddatga ijara ga berasiz?
 
