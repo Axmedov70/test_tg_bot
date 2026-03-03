@@ -12,7 +12,6 @@ from aiogram.client.session.aiohttp import AiohttpSession
 
 TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
 
-# Diqqat: Proxy faqat kerak bo'lsa ishlating, aks holda oddiy session ishlating
 PROXY_URL = 'http://proxy.server:3128'
 session = AiohttpSession(proxy=PROXY_URL)
 bot = Bot(token=TOKEN, session=session)
@@ -74,7 +73,6 @@ async def tamir(message: types.Message, state: FSMContext):
     await message.answer("Binoda bor qo'shimcha jihozlarni quyidagi tugmalar yordamida tanlang 👇", reply_markup=jihoz_menu)
     await state.set_state(arenda_uy.jihozlar)
 
-# "Barchasini tanlang" yoki matn kelganda jihozlarni saqlash
 @dp.message(arenda_uy.jihozlar)
 async def jihoz(message: types.Message, state: FSMContext):
     await state.update_data(jihozlar=message.text)
@@ -82,10 +80,9 @@ async def jihoz(message: types.Message, state: FSMContext):
 📎 Shu belgini bosib rasm yuklang.
 
 Yuklangan rasm asosiy qilib belgilanadi.
-""", reply_markup=types.ReplyKeyboardRemove()) # Rasm yuklashda klaviatura xalaqit bermasligi uchun
+""", reply_markup=types.ReplyKeyboardRemove()) 
     await state.set_state(arenda_uy.rasim)
 
-# Faqat rasm yuklanganda ishlaydi
 @dp.message(arenda_uy.rasim, F.photo)
 async def rasim_step(message: types.Message, state: FSMContext):
     await state.update_data(rasim=message.photo[-1].file_id)
