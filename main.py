@@ -183,10 +183,8 @@ async def tel_raqam(message: types.Message, state: FSMContext):
 🛏️ JIHOZLAR:  {data.get('jihozlar')}
 💵 NARX:  {data.get('narx')}
 💳 MAKLER:   {data.get('makler')}
-📞 TELEFON RAQAM:   {data.get('tel_raqam')}
 
 ✏️ @{message.from_user.username}
-
 """
 
     await state.clear()
