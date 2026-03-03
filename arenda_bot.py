@@ -3,7 +3,7 @@ import logging
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
-from button import makler_narx, davom_etish, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, kvartira_menu, maydon, olmazor, tamir_menu, uzoq_muddatga, toshkent_tuman
+from button import makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, kvartira_menu, maydon, olmazor, tamir_menu, uzoq_muddatga, toshkent_tuman
 
 API_TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
 logging.basicConfig(level=logging.INFO)
@@ -114,7 +114,7 @@ async def get_photo(message: types.Message):
     await message.answer("""
 Agar boshqa rasm bo'lmasa,
 
-Davom etish⏩️ tugmasini bosing.""", reply_markup=davom_etish)
+Davom etish⏩️ tugmasini bosing.""")
 
 
    

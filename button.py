@@ -141,7 +141,7 @@ toshkent_tuman = ReplyKeyboardMarkup(
     resize_keyboard=True
 )
 
-olmazor = ReplyKeyboardMarkup(
+xona = ReplyKeyboardMarkup(
 
     keyboard=[
         [
