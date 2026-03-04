@@ -171,7 +171,7 @@ async def tel_raqam(message: types.Message, state: FSMContext):
     data = await state.get_data()
 
     text = f"""
-🌟IJARA-CHI | KVARTIRA, {data.get('kuchmas_mulk')}
+🌟IJARA-CHI | {data.get('kuchmas_mulk')}
 
 🏦 KUCHMAS MULK:  {data.get('kuchmas_mulk')}
 ⏰ MUDDAT:  {data.get('muddat')}

@@ -81,10 +81,6 @@ viloyat_menu = ReplyKeyboardMarkup(
             KeyboardButton(text="Farg'ona") 
         ],
         [
-            KeyboardButton(text="Namangan"),
-            KeyboardButton(text="Navoiy") 
-        ],
-        [
             KeyboardButton(text="Samarqand"),
             KeyboardButton(text="Sirdaryo") 
         ],
@@ -95,10 +91,6 @@ viloyat_menu = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="Surxondaryo"),
             KeyboardButton(text="Andijon")
-        ],
-        [
-            KeyboardButton(text="Xorazm"),
-            KeyboardButton(text="Qoraqalpog'iston")
         ]
     ],
     resize_keyboard=True
@@ -134,7 +126,7 @@ toshkent_tuman = ReplyKeyboardMarkup(
             KeyboardButton(text="Yangihayot")
         ],
         [
-            KeyboardButton(text="◀️ Orqaga"),
+            KeyboardButton(text="◀️ Orqaga"), 
             KeyboardButton(text="🏠 Bosh sahifa")
         ]
     ],
