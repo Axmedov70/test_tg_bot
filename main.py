@@ -114,9 +114,9 @@ async def tamir(message: types.Message, state: FSMContext):
     await message.answer("""
 Binoda bor qo'shimcha jihozlarni quyidagi tugmalar yordamida tanlang 👇
 """, reply_markup=jihoz_menu)
-    await state.set_state(arenda_uy.jihozlar)
+    await state.set_state(arenda_uy.jihoz_state)
 
-@dp.message(arenda_uy.jihozlar)
+@dp.message(arenda_uy.jihoz_state)
 async def jihoz(message: types.Message, state: FSMContext):
     await state.update_data(jihoz=message.text)
     await message.answer("""
