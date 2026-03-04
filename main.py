@@ -180,7 +180,7 @@ async def tel_raqam(message: types.Message, state: FSMContext):
 🚪 NECHA XONA:  {data.get('xona')}
 🏡 MAYDON:  {data.get('maydon')}
 🛠️ TAMIR:  {data.get('tamir')}
-🛏️ JIHOZLAR:  {data.get('jihozlar')}
+🛏️ JIHOZLAR:  {data.get('jihoz_state')}
 💵 NARX:  {data.get('narx')}
 💳 MAKLER:   {data.get('makler')}
 
