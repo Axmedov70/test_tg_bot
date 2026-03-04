@@ -10,7 +10,7 @@ class arenda_uy(StatesGroup):
     xona = State()
     maydon = State()
     tamir = State()
-    jihoz_state = State()
+    jihoz_uy = State()
     rasim = State()
     narx = State()
     makler = State()

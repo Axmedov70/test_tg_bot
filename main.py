@@ -114,11 +114,11 @@ async def tamir(message: types.Message, state: FSMContext):
     await message.answer("""
 Binoda bor qo'shimcha jihozlarni quyidagi tugmalar yordamida tanlang 👇
 """, reply_markup=jihoz_menu)
-    await state.set_state(arenda_uy.jihoz_state)
+    await state.set_state(arenda_uy.jihoz_uy)
 
-@dp.message(arenda_uy.jihoz_state)
-async def jihoz(message: types.Message, state: FSMContext):
-    await state.update_data(jihoz=message.text)
+@dp.message(arenda_uy.jihoz_uy)
+async def jihoz_uy(message: types.Message, state: FSMContext):
+    await state.update_data(jihoz_uy=message.text)
     await message.answer("""
 📎 Shu belgini bosib rasmlarni yuklang.
 
@@ -167,7 +167,7 @@ yoki boshqa raqamingizni shu ko'rinishda yozing!
 
 @dp.message(arenda_uy.tel_raqam)
 async def tel_raqam(message: types.Message, state: FSMContext):
-    await state.update_data(finish=message.text)
+    await state.update_data(tel_raqam=message.text)
     data = await state.get_data()
 
     text = f"""
@@ -187,7 +187,7 @@ async def tel_raqam(message: types.Message, state: FSMContext):
 ✏️ @{message.from_user.username}
 """
 
-    await state.clear()
+    # await state.clear()
     await message.answer_photo(photo=data.get('rasim'), caption=text)
 
 
