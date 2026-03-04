@@ -180,14 +180,14 @@ async def tel_raqam(message: types.Message, state: FSMContext):
 🚪 NECHA XONA:  {data.get('xona')}
 🏡 MAYDON:  {data.get('maydon')}
 🛠️ TAMIR:  {data.get('tamir')}
-🛏️ JIHOZLAR:  {data.get('jihoz_state')}
+🛏️ JIHOZLAR:  {data.get('jihoz_uy')}
 💵 NARX:  {data.get('narx')}
 💳 MAKLER:   {data.get('makler')}
 
 ✏️ @{message.from_user.username}
 """
 
-    # await state.clear()
+    await state.clear()
     await message.answer_photo(photo=data.get('rasim'), caption=text)
 
 
