@@ -5,13 +5,16 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.storage.memory import MemoryStorage
-
+from aiogram.client.session.aiohttp import AiohttpSession
 from states import arenda_uy
 from button import xona_menu, makler_narx, telefon_raqam, start_menu, narx, katta_menu, barchasini_tanlang, jihoz_menu, muddat_menu, maydon_menu, tamir_menu, viloyat_menu, toshkent_tuman
 
 TOKEN = "8427220208:AAGt4drTxPWdYFh8kahn7S5bAh8AL3SWiPc"
 
-bot = Bot(token=TOKEN)
+PROXY_URL = 'http://proxy.server:3128'
+session = AiohttpSession(proxy=PROXY_URL)
+
+bot = Bot(token=TOKEN, session=session)
 logging.basicConfig(level=logging.INFO)
 
 dp = Dispatcher(storage=MemoryStorage())
