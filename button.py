@@ -74,7 +74,9 @@ viloyat_menu = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="Toshkent"),
-            KeyboardButton(text="Toshkent vil")
+        ],
+        [
+            KeyboardButton(text="Toshkent vil"),
         ],
         [
             KeyboardButton(text="Qashqadaryo"),
@@ -91,6 +93,10 @@ viloyat_menu = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="Surxondaryo"),
             KeyboardButton(text="Andijon")
+        ],
+        [
+            KeyboardButton(text="◀️ Orqaga"), 
+            KeyboardButton(text="🏠 Bosh sahifa")
         ]
     ],
     resize_keyboard=True
@@ -132,6 +138,53 @@ toshkent_tuman = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+samarqand_tuman = ReplyKeyboardMarkup(
+
+    keyboard=[
+        [
+            KeyboardButton(text="Samarqand shahri"),
+            KeyboardButton(text="Samarqand (tumani)")
+        ],
+
+        [
+            KeyboardButton(text="Jomboy"),
+            KeyboardButton(text="Kattaqo'rg'on shahri") 
+        ],
+        [
+            KeyboardButton(text="Nurobod"),
+            KeyboardButton(text="Oqdaryo") 
+        ],
+        [
+            KeyboardButton(text="Pastdarg'om"),
+            KeyboardButton(text="Paxtachi") 
+        ],
+        [
+            KeyboardButton(text="Poyariq"),
+            KeyboardButton(text="Qo'shrabot")
+        ],
+        [
+            KeyboardButton(text="Narpay"),
+            KeyboardButton(text="Bulung'ur")
+        ],
+        [
+            KeyboardButton(text="Toyloq"),
+            KeyboardButton(text="Urgut")
+        ],
+         [
+            KeyboardButton(text="Ishtixon"),
+            KeyboardButton(text="Kattaqo'rg'on (tumani)")
+        ],
+        [
+            KeyboardButton(text="◀️ Orqaga"), 
+            KeyboardButton(text="🏠 Bosh sahifa")
+        ]
+    ],
+    resize_keyboard=True
+)
+
+
+
 
 xona_menu = ReplyKeyboardMarkup(
 
